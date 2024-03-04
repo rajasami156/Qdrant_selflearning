@@ -1,13 +1,12 @@
 from flask import Flask, request, jsonify
 import requests
-
 from main import qa
 
 
 app = Flask(__name__)
 
 @app.route('/chat', methods=['POST'])
-def ask():
+def askchatbot():
     data = request.json
     prompt = data.get('prompt')
     if prompt:
